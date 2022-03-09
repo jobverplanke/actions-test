@@ -6,12 +6,12 @@ on:
 
 jobs:
   update:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     name: Update Changelog
 
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v2
         with:
           # Fetch entire history of repository to ensure relase date can be
@@ -36,10 +36,9 @@ jobs:
           compare-url-target-revision: ${{ github.event.release.target_commitish }}
 
       - name: Commit updated CHANGELOG
-        uses: stefanzweifel/git-auto-commit-action@v3
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           # Push updated CHANGELOG to release target branch.
           branch: ${{ github.event.release.target_commitish }}
           commit_message: Update CHANGELOG
           file_pattern: CHANGELOG.md
-

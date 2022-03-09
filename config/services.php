@@ -30,4 +30,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'ikea' => [
+        'address' => '192.168.178.248',
+        'user' => 'jobverplanke',
+        'pre_shared_key' => 'WytrGfZ2CIzsQ45n',
+    ]
+
 ];
