@@ -31,11 +31,14 @@ jobs:
         run: npx ci
 
       - name: Install semantic-release extra plugins
-        run: npm install --save-dev semantic-release
+        run: | 
+          npm install --save-dev semantic-release
+          npm install --save-dev @semantic-release/commit-analyzer
+          npm install --save-dev @semantic-release/github
 
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIT_AUTHOR_NAME: "jobverplanke"
-          GIT_AUTHOR_EMAIL: "job.verplanke@gmail.com"
+          GIT_COMMITTER_NAME: "jobverplanke"
+          GIT_COMMITTER_EMAIL: "job.verplanke@gmail.com"
         run: npx semantic-release
