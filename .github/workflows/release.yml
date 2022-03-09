@@ -36,6 +36,7 @@ jobs:
           npm install --save-dev @semantic-release/commit-analyzer
           npm install --save-dev @semantic-release/release-notes-generator
           npm install --save-dev @semantic-release/github
+          npm install --save-dev conventional-changelog-conventionalcommits
 
       - name: Release
         env:
