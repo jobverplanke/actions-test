@@ -11,6 +11,10 @@ jobs:
     name: Update Changelog
 
     steps:
+
+      - name: Branch
+        run: echo ${{ github.event.release.target_commitish }}
+
       - name: Checkout code
         uses: actions/checkout@v2
         with:
@@ -40,5 +44,7 @@ jobs:
         with:
           # Push updated CHANGELOG to release target branch.
           branch: ${{ github.event.release.target_commitish }}
+          commit_user_name: Job Verplanke
+          commit_user_email: job.verplanke@gmail.com
           commit_message: Update CHANGELOG
           file_pattern: CHANGELOG.md
