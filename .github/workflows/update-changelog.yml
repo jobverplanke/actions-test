@@ -35,6 +35,10 @@ jobs:
           latest-version: ${{ github.event.release.tag_name }}
           compare-url-target-revision: ${{ github.event.release.target_commitish }}
 
+      - name: "Run if changes have been detected"
+        if: steps.auto-commit-action.outputs.changes_detected == 'true'
+        run: echo "Changes!"
+
       - name: Commit updated CHANGELOG
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
@@ -42,3 +46,4 @@ jobs:
           branch: ${{ github.event.release.target_commitish }}
           commit_message: Update CHANGELOG
           file_pattern: CHANGELOG.md
+          skip_dirty_check: true
