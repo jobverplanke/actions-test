@@ -23,7 +23,7 @@ jobs:
           fetch-depth: 0
           # Checkout target branch of this release. Ensures that the CHANGELOG
           # is not out of date.
-          ref: ${{ github.event.release.target_commitish }}
+          ref: main
 
       - name: Extract release date from git tag
         id: release_date
@@ -43,7 +43,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           # Push updated CHANGELOG to release target branch.
-          branch: ${{ github.event.release.target_commitish }}
+          branch: main
           commit_user_name: Job Verplanke
           commit_user_email: job.verplanke@gmail.com
           commit_message: Update CHANGELOG
