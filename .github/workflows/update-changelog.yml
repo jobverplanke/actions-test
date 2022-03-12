@@ -34,3 +34,6 @@ jobs:
           branch: ${{ github.event.release.target_commitish }}
           commit_message: Update CHANGELOG
           file_pattern: CHANGELOG.md
+          commit_user_name: Job Verplanke
+          commit_user_email: job.verplanke@gmail.com
+          push_options: '--force'
