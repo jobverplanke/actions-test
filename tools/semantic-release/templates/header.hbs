@@ -1,7 +1,7 @@
-## v{{#if @root.linkCompare~}}
-  [{{version}}]({{compareUrlFormat}})
+## {{#if @root.linkCompare~}}
+  [v{{version}}]({{compareUrlFormat}})
 {{~else}}
-  {{~version}}
+  v{{~version}}
 {{~/if}}
 {{~#if title}} "{{title}}"
 {{~/if}}
