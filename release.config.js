@@ -6,6 +6,7 @@ module.exports = {
   tagFormat: 'v${version}',
   plugins: [
     ["@semantic-release/commit-analyzer", {
+      preset: 'conventionalcommits',
       releaseRules: [
         {type: 'breaking', release: 'major'},
         {type: 'feat', release: 'minor'},
@@ -27,9 +28,6 @@ module.exports = {
       },
       writerOpts: {
         headerPartial: readFileSync(join(__dirname, 'tools/semantic-release/templates/header.hbs'), 'utf-8'),
-      },
-      parserOpts: {
-        noteKeywords: ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
       },
     }],
     ['@semantic-release/changelog', {
