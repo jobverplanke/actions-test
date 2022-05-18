@@ -9,9 +9,6 @@ module.exports = {
         {type: 'fix', release: 'patch'},
         {type: 'chore', release: 'patch'},
       ],
-      parserOpts: {
-        noteKeywords: ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
-      },
     }],
     ['@semantic-release/release-notes-generator', {
       preset: 'conventionalcommits',
@@ -22,10 +19,14 @@ module.exports = {
           {type: 'chore', section: 'Chores'},
         ],
       },
-      parserOpts: {
-        noteKeywords: ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
-      },
     }],
-    "@semantic-release/github"
+    ['@semantic-release/changelog', {
+      changelogFile: 'CHANGELOG.md',
+      changelogTitle: 'Release Notes',
+    }],
+    ['@semantic-release/github'],
+    ['@semantic-release/git', {
+      assets: 'CHANGELOG.md',
+    }]
   ]
 }

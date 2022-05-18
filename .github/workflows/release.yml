@@ -12,20 +12,13 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '16'
-
-      - name: Cache Node Dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: 18
+          cache: 'npm'
 
       - name: Install Dependencies
         run: npx ci
@@ -35,7 +28,9 @@ jobs:
           npm install --save-dev semantic-release
           npm install --save-dev @semantic-release/commit-analyzer
           npm install --save-dev @semantic-release/release-notes-generator
+          npm install --save-dev @semantic-release/changelog
           npm install --save-dev @semantic-release/github
+          npm install --save-dev @semantic-release/git
           npm install --save-dev conventional-changelog-conventionalcommits
 
       - name: Release
