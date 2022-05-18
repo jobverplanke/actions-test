@@ -28,6 +28,9 @@ module.exports = {
       writerOpts: {
         headerPartial: readFileSync(join(__dirname, 'tools/semantic-release/templates/header.hbs'), 'utf-8'),
       },
+      parserOpts: {
+        noteKeywords: ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
+      },
     }],
     ['@semantic-release/changelog', {
       changelogFile: 'CHANGELOG.md',
