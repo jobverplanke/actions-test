@@ -1,3 +1,12 @@
+# Release Notes
+
+## [1.21.0](https://github.com/jobverplanke/actions-test/compare/v1.20.0...v1.21.0) (2022-05-18)
+
+
+### Features
+
+* Test new release format ([9fdf4c8](https://github.com/jobverplanke/actions-test/commit/9fdf4c88f0d24cfe78a06120e2ac02cebf67aa96))
+
 Release Notes
 
 ## [1.20.0](https://github.com/jobverplanke/actions-test/compare/v1.19.0...v1.20.0) (2022-05-18)
