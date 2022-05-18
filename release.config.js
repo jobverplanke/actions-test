@@ -23,7 +23,7 @@ module.exports = {
         ],
       },
       writerOpts: {
-        headerPartial: readFileSync(join(__dirname, 'templates/header.hbs'), 'utf-8'),
+        headerPartial: readFileSync(join(__dirname, 'tools/semantic-release/templates/header.hbs'), 'utf-8'),
       }
     }],
     ['@semantic-release/changelog', {
