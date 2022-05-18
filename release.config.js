@@ -15,6 +15,7 @@ module.exports = {
     }],
     ['@semantic-release/release-notes-generator', {
       preset: 'conventionalcommits',
+      linkCompare: true,
       presetConfig: {
         types: [
           {type: 'feat', section: 'Features'},
