@@ -1,5 +1,12 @@
 # Release Notes
 
+## v1.23.0 (2022-05-18)
+
+### Features
+
+* Added custom template ([bb7ba92](https://github.com/jobverplanke/actions-test/commit/bb7ba92d8166a1e994f8504348ae8ab6f44bc469))
+* Updated path to templates ([33aa3ef](https://github.com/jobverplanke/actions-test/commit/33aa3ef5e68a0b1e4f293aed7294da1f972b3f65))
+
 ## [1.22.0](https://github.com/jobverplanke/actions-test/compare/v1.21.0...v1.22.0) (2022-05-18)
 
 
