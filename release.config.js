@@ -26,10 +26,6 @@ module.exports = {
     }],
     ['@semantic-release/github', {
       releasedLabels: 'v<%= nextRelease.gitTag %>',
-      assets: [{
-        path: '',
-        label: '${nextRelease.gitTag}.zip'
-      }]
     }],
     ['@semantic-release/git', {
       assets: 'CHANGELOG.md',
