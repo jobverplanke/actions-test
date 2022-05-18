@@ -1,3 +1,6 @@
+const readFileSync = require('fs').readFileSync
+const join = require('path').join
+
 module.exports = {
   branches: ['main'],
   tagFormat: 'v${version}',
@@ -19,6 +22,9 @@ module.exports = {
           {type: 'chore', section: 'Chores'},
         ],
       },
+      writerOpts: {
+        headerPartial: readFileSync(join(__dirname, 'templates/header.hbs'), 'utf-8'),
+      }
     }],
     ['@semantic-release/changelog', {
       changelogFile: 'CHANGELOG.md',
