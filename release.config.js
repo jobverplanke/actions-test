@@ -22,9 +22,15 @@ module.exports = {
     }],
     ['@semantic-release/changelog', {
       changelogFile: 'CHANGELOG.md',
-      changelogTitle: 'Release Notes',
+      changelogTitle: '# Release Notes',
     }],
-    ['@semantic-release/github'],
+    ['@semantic-release/github', {
+      releasedLabels: 'v<%= nextRelease.gitTag %>',
+      assets: [{
+        path: '',
+        label: '${nextRelease.gitTag}.zip'
+      }]
+    }],
     ['@semantic-release/git', {
       assets: 'CHANGELOG.md',
     }]
