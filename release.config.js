@@ -12,10 +12,12 @@ module.exports = {
         {type: 'fix', release: 'patch'},
         {type: 'chore', release: 'patch'},
       ],
+      parserOpts: {
+        noteKeywords: ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
+      },
     }],
     ['@semantic-release/release-notes-generator', {
       preset: 'conventionalcommits',
-      linkCompare: true,
       presetConfig: {
         types: [
           {type: 'feat', section: 'Features'},
@@ -25,9 +27,6 @@ module.exports = {
       },
       writerOpts: {
         headerPartial: readFileSync(join(__dirname, 'tools/semantic-release/templates/header.hbs'), 'utf-8'),
-      },
-      parserOpts: {
-        noteKeywords: ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
       },
     }],
     ['@semantic-release/changelog', {
