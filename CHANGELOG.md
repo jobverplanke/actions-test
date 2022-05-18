@@ -1,5 +1,12 @@
 Release Notes
 
+## [1.20.0](https://github.com/jobverplanke/actions-test/compare/v1.19.0...v1.20.0) (2022-05-18)
+
+
+### Features
+
+* Remove English language ([97351fc](https://github.com/jobverplanke/actions-test/commit/97351fce0f850e78ac421054a41102faf196c71d))
+
 ## [1.19.0](https://github.com/jobverplanke/actions-test/compare/v1.18.0...v1.19.0) (2022-05-18)
 
 
