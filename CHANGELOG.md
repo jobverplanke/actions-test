@@ -1,5 +1,11 @@
 # Release Notes
 
+## v1.24.0 (2022-05-18)
+
+### Features
+
+* Test ([c448de9](https://github.com/jobverplanke/actions-test/commit/c448de9d76b3762dc3f81cbd17664e1bc6d87c77))
+
 ## v1.23.0 (2022-05-18)
 
 ### Features
