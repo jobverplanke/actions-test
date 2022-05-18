@@ -1,5 +1,12 @@
 # Release Notes
 
+## v[1.25.0]() (2022-05-18)
+
+
+### Features
+
+* Update header template ([e445434](https://github.com/jobverplanke/actions-test/commit/e445434c745e3bfb9d87318008784cf6fc7c0920))
+
 ## v1.24.0 (2022-05-18)
 
 ### Features
