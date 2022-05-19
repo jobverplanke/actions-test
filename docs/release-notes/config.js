@@ -28,7 +28,7 @@ config = {
       types: types
     },
     writerOpts: {
-      headerPartial: readFileSync(join(__dirname, 'docs/release-notes/templates/header.hbs'), 'utf-8'),
+      headerPartial: readFileSync(join(__dirname, 'templates/header.hbs'), 'utf-8'),
     },
   },
   changelog: {
