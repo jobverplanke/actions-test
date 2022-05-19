@@ -1,5 +1,7 @@
 # Release Notes
 
+## [v8.0.0](https://github.com/jobverplanke/actions-test/compare/v7.0.0...v8.0.0) (2022-05-19)
+
 ## [v7.0.0](https://github.com/jobverplanke/actions-test/compare/v6.0.0...v7.0.0) (2022-05-19)
 
 ## [v6.0.0](https://github.com/jobverplanke/actions-test/compare/v5.0.0...v6.0.0) (2022-05-19)
