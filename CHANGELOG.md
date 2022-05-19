@@ -1,5 +1,12 @@
 # Changelog
 
+## [v12.2.0](https://github.com/jobverplanke/actions-test/compare/v12.1.0...v12.2.0) (2022-05-19)
+
+
+### Features
+
+* removed old .release directory from repo ([57cb1fc](https://github.com/jobverplanke/actions-test/commit/57cb1fc975ed521c9b7cdcbfe062846720c37a47))
+
 ## [v12.1.0](https://github.com/jobverplanke/actions-test/compare/v12.0.0...v12.1.0) (2022-05-19)
 
 
