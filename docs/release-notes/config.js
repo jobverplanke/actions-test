@@ -40,7 +40,7 @@ config = {
   },
   git: {
     assets: 'CHANGELOG.md',
-    message: '[v${gitVersion}] Update CHANGELOG',
+    message: '[v<%= nextRelease.version %>] Update CHANGELOG',
   }
 }
 
