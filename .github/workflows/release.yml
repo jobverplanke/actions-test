@@ -37,5 +37,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           GIT_AUTHOR_NAME: Job Verplanke
-          GIT_COMMITTER_NAME: Job Verplanke
+          GIT_AUTHOR_EMAIL: job.verplanke@gmail.com
         run: npx semantic-release
