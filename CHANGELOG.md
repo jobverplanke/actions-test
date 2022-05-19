@@ -1,5 +1,12 @@
 # Release Notes
 
+# [11.0.0](https://github.com/jobverplanke/actions-test/compare/v10.0.0...v11.0.0) (2022-05-19)
+
+
+### Features
+
+* delete template ([8e0102e](https://github.com/jobverplanke/actions-test/commit/8e0102e29db9a8fafb48d31c1e5a6abd53f1b122))
+
 ## [10.0.0](https://github.com/jobverplanke/actions-test/compare/v9.0.0...v10.0.0) (2022-05-19)
 
 ## [v9.0.0](https://github.com/jobverplanke/actions-test/compare/v8.0.0...v9.0.0) (2022-05-19)
