@@ -1,5 +1,12 @@
 # Release Notes
 
+## [v2.1.0]() (2022-05-19)
+
+
+### Features
+
+* update release rules11 ([2454aa1](https://github.com/jobverplanke/actions-test/commit/2454aa1066dfbd87a078b9f2ade7a9a3d9096e65))
+
 ## [v2.0.0]() (2022-05-19)
 
 
