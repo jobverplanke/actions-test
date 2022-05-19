@@ -19,7 +19,6 @@ module.exports = {
       },
     }],
     ['@semantic-release/release-notes-generator', {
-      preset: 'conventionalcommits',
       presetConfig: {
         types: [
           {type: 'feat', section: 'Features'},
@@ -29,9 +28,6 @@ module.exports = {
           {type: 'chore', section: 'Chores'},
         ],
       },
-      // writerOpts: {
-      //   headerPartial: readFileSync(join(__dirname, 'tools/semantic-release/templates/header.hbs'), 'utf-8'),
-      // },
     }],
     ['@semantic-release/changelog', {
       changelogFile: 'CHANGELOG.md',
