@@ -1,5 +1,14 @@
 # Changelog
 
+## [v13.0.0](https://github.com/jobverplanke/actions-test/compare/v12.2.0...v13.0.0) (2022-05-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* Nu werkt het
+
+* Updated APP_URL ([5502dd5](https://github.com/jobverplanke/actions-test/commit/5502dd51d74a2e1c797272c263ae43abfb3c6d08))
+
 ## [v12.2.0](https://github.com/jobverplanke/actions-test/compare/v12.1.0...v12.2.0) (2022-05-19)
 
 
