@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     ["@semantic-release/commit-analyzer", {
       preset: 'conventionalcommits',
+      linkCompare: true,
       releaseRules: [
         {type: 'breaking', release: 'major'},
         {type: 'feat', release: 'minor'},
@@ -24,15 +25,14 @@ module.exports = {
       presetConfig: {
         types: [
           {type: 'feat', section: 'Features'},
+          {type: 'feature', section: 'Features'},
           {type: 'fix', section: 'Fixes'},
+          {type: 'hotfix', section: 'Fixes'},
           {type: 'chore', section: 'Chores'},
         ],
       },
       writerOpts: {
         headerPartial: readFileSync(join(__dirname, 'tools/semantic-release/templates/header.hbs'), 'utf-8'),
-      },
-      parserOpts: {
-        noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES', 'BREAKING']
       },
     }],
     ['@semantic-release/changelog', {
