@@ -1,45 +1,13 @@
-const readFileSync = require('fs').readFileSync
-const join = require('path').join
+const config = require('./docs/release-notes/config.js')
 
 module.exports = {
   branches: ['main'],
   tagFormat: 'v${version}',
   plugins: [
-    ["@semantic-release/commit-analyzer", {
-      releaseRules: [
-        {type: 'breaking', release: 'major'},
-        {type: 'feat', release: 'minor'},
-        {type: 'feature', release: 'minor'},
-        {type: 'fix', release: 'patch'},
-        {type: 'hotfix', release: 'patch'},
-        {type: 'chore', release: 'patch'},
-      ],
-      parserOpts: {
-        noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES', 'BREAKING']
-      },
-    }],
-    ['@semantic-release/release-notes-generator', {
-      preset: 'conventionalcommits',
-      presetConfig: {
-        types: [
-          {type: 'feat', section: 'Features'},
-          {type: 'feature', section: 'Features'},
-          {type: 'fix', section: 'Fixes'},
-          {type: 'hotfix', section: 'Fixes'},
-          {type: 'chore', section: 'Chores'},
-        ],
-      },
-    }],
-    ['@semantic-release/changelog', {
-      changelogFile: 'CHANGELOG.md',
-      changelogTitle: '# Release Notes',
-    }],
-    ['@semantic-release/github', {
-      releasedLabels: 'v<%= nextRelease.gitTag %>',
-    }],
-    ['@semantic-release/git', {
-      assets: 'CHANGELOG.md',
-      message: 'Update CHANGELOG'
-    }]
+    ['@semantic-release/commit-analyzer', config.commitAnalyzer],
+    ['@semantic-release/release-notes-generator', config.releaseNotesGenerator],
+    ['@semantic-release/changelog', config.changelog],
+    ['@semantic-release/github', config.github],
+    ['@semantic-release/git', config.git],
   ]
 }
