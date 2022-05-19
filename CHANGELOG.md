@@ -1,5 +1,12 @@
 # Release Notes
 
+## [12.0.0](https://github.com/jobverplanke/actions-test/compare/v11.0.0...v12.0.0) (2022-05-19)
+
+
+### Features
+
+* update APP_URL ([f94a629](https://github.com/jobverplanke/actions-test/commit/f94a629edabe5a94ffeec50758b025646ac9c55b))
+
 # [11.0.0](https://github.com/jobverplanke/actions-test/compare/v10.0.0...v11.0.0) (2022-05-19)
 
 
