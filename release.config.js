@@ -43,6 +43,7 @@ module.exports = {
     }],
     ['@semantic-release/git', {
       assets: 'CHANGELOG.md',
+      message: 'Update CHANGELOG'
     }]
   ]
 }
