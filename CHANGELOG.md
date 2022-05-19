@@ -1,5 +1,20 @@
 # Release Notes
 
+## [v2.0.0]() (2022-05-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* CHANGE
+* CHANGES
+
+### Features
+
+* update release rules ([adf6f29](https://github.com/jobverplanke/actions-test/commit/adf6f29ba501cfd5d4a0c7dacef6607a348c4240))
+
+
+* BREAKING BREAKING CHANGE ([a27f9f8](https://github.com/jobverplanke/actions-test/commit/a27f9f84ff89c8dcb9080fc313a8811545017bbb))
+
 ## v[1.25.0]() (2022-05-18)
 
 
