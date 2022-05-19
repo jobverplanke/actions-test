@@ -1,4 +1,4 @@
-const config = require('./docs/release-notes/config.js')
+const config = require('./docs/release/config.js')
 
 module.exports = {
   branches: ['main'],
