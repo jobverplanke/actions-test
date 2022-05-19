@@ -1,3 +1,18 @@
+# Changelog
+
+## [v12.1.0](https://github.com/jobverplanke/actions-test/compare/v12.0.0...v12.1.0) (2022-05-19)
+
+
+### Features
+
+* Add new header ([d644186](https://github.com/jobverplanke/actions-test/commit/d6441865890d938c435704e86bb43f8241438042))
+
+
+### Chores
+
+* correct templates path in config ([e735afe](https://github.com/jobverplanke/actions-test/commit/e735afe6acf60b006b9ad3ee3a17f81c49c7a95c))
+* removed old header ([563e71a](https://github.com/jobverplanke/actions-test/commit/563e71ab217e909d66edc754f1f8f9d8abd3f2d0))
+
 # Release Notes
 
 ## [12.0.0](https://github.com/jobverplanke/actions-test/compare/v11.0.0...v12.0.0) (2022-05-19)
