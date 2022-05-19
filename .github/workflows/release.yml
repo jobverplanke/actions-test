@@ -32,11 +32,10 @@ jobs:
           npm install --save-dev @semantic-release/github
           npm install --save-dev @semantic-release/git
           npm install --save-dev conventional-changelog-conventionalcommits
-        env:
-          GIT_AUTHOR_NAME: Job Verplanke
-          GIT_COMMITTER_NAME: Job Verplanke
 
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIT_AUTHOR_NAME: Job Verplanke
+          GIT_COMMITTER_NAME: Job Verplanke
         run: npx semantic-release
