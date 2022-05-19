@@ -10,7 +10,9 @@ module.exports = {
       releaseRules: [
         {type: 'breaking', release: 'major'},
         {type: 'feat', release: 'minor'},
+        {type: 'feature', release: 'minor'},
         {type: 'fix', release: 'patch'},
+        {type: 'hotfix', release: 'patch'},
         {type: 'chore', release: 'patch'},
       ],
       parserOpts: {
