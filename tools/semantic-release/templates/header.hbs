@@ -1,5 +1,17 @@
 ## {{#if @root.linkCompare~}}
-  [v{{version}}]({{compareUrlFormat}})
+  [v{{version}}](
+  {{~#if @root.repository~}}
+    {{~#if @root.host}}
+      {{~@root.host}}/
+    {{~/if}}
+    {{~#if @root.owner}}
+      {{~@root.owner}}/
+    {{~/if}}
+    {{~@root.repository}}
+  {{~else}}
+    {{~@root.repoUrl}}
+  {{~/if~}}
+  /compare/{{previousTag}}...{{currentTag}})
 {{~else}}
   v{{~version}}
 {{~/if}}

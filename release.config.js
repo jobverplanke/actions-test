@@ -6,8 +6,6 @@ module.exports = {
   tagFormat: 'v${version}',
   plugins: [
     ["@semantic-release/commit-analyzer", {
-      preset: 'conventionalcommits',
-      linkCompare: true,
       releaseRules: [
         {type: 'breaking', release: 'major'},
         {type: 'feat', release: 'minor'},
