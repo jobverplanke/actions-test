@@ -6,7 +6,6 @@ module.exports = {
   tagFormat: 'v${version}',
   plugins: [
     ["@semantic-release/commit-analyzer", {
-      preset: 'conventionalcommits',
       releaseRules: [
         {type: 'breaking', release: 'major'},
         {type: 'feat', release: 'minor'},
@@ -30,9 +29,9 @@ module.exports = {
           {type: 'chore', section: 'Chores'},
         ],
       },
-      writerOpts: {
-        headerPartial: readFileSync(join(__dirname, 'tools/semantic-release/templates/header.hbs'), 'utf-8'),
-      },
+      // writerOpts: {
+      //   headerPartial: readFileSync(join(__dirname, 'tools/semantic-release/templates/header.hbs'), 'utf-8'),
+      // },
     }],
     ['@semantic-release/changelog', {
       changelogFile: 'CHANGELOG.md',
