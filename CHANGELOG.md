@@ -1,5 +1,12 @@
 # Release Notes
 
+## [v2.2.0](https://github.com/jobverplanke/actions-test/compare/v2.1.0...v2.2.0) (2022-05-19)
+
+
+### Features
+
+* sdasdsadad ([873fd2c](https://github.com/jobverplanke/actions-test/commit/873fd2c3249fb733c4a3cf03c9e896866dc583ce))
+
 ## [v2.1.0]() (2022-05-19)
 
 
