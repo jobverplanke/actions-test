@@ -6,16 +6,16 @@ on:
       target:
         description: 'Environment'
         required: true
-        default: 'Staging'
+        default: 'staging'
         type: choice
         options:
-          - Staging
-          - Acceptance
-          - Production
+          - staging
+          - acceptance
+          - production
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name:
-        run: echo ${{ github.event.inputs.target
+        run: echo ${{ github.event.inputs.target }}
