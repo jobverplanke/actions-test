@@ -3,19 +3,34 @@ name: Deploy
 on:
   workflow_dispatch:
     inputs:
-      target:
-        description: 'Environment'
+      environment:
+        description: 'Deploy to environment'
+        type: environment
         required: true
-        default: 'staging'
-        type: choice
-        options:
-          - staging
-          - acceptance
-          - production
+#        type: choice
+#        options:
+#          - staging
+#          - acceptance
+#          - production
 
 jobs:
-  build:
+  build-staging:
     runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - name:
+        run: echo ${{ github.event.inputs.target }}
+
+  build-acceptance:
+    runs-on: ubuntu-latest
+    environment: acceptance
+    steps:
+      - name:
+        run: echo ${{ github.event.inputs.target }}
+
+  build-production:
+    runs-on: ubuntu-latest
+    environment: production
     steps:
       - name:
         run: echo ${{ github.event.inputs.target }}
