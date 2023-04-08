@@ -1,39 +1,39 @@
-name: Release
+# name: Release
 
-on:
-  push:
-    branches: [main]
+# on:
+#   push:
+#     branches: [main]
 
-jobs:
-  release:
-    runs-on: ubuntu-20.04
+# jobs:
+#   release:
+#     runs-on: ubuntu-20.04
 
-    name: Release API
+#     name: Release API
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: 'npm'
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: 18
+#           cache: 'npm'
 
-      - name: Install Dependencies
-        run: npx ci
+#       - name: Install Dependencies
+#         run: npx ci
 
-      - name: Install semantic-release extra plugins
-        run: | 
-          npm install --save-dev semantic-release
-          npm install --save-dev @semantic-release/commit-analyzer
-          npm install --save-dev @semantic-release/release-notes-generator
-          npm install --save-dev @semantic-release/changelog
-          npm install --save-dev @semantic-release/github
-          npm install --save-dev @semantic-release/git
-          npm install --save-dev conventional-changelog-conventionalcommits
+#       - name: Install semantic-release extra plugins
+#         run: | 
+#           npm install --save-dev semantic-release
+#           npm install --save-dev @semantic-release/commit-analyzer
+#           npm install --save-dev @semantic-release/release-notes-generator
+#           npm install --save-dev @semantic-release/changelog
+#           npm install --save-dev @semantic-release/github
+#           npm install --save-dev @semantic-release/git
+#           npm install --save-dev conventional-changelog-conventionalcommits
 
-      - name: Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: npx semantic-release
+#       - name: Release
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+#         run: npx semantic-release
