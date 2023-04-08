@@ -1,0 +1,21 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Environment'
+        required: true
+        default: 'Staging'
+        type: choice
+        options:
+          - Staging
+          - Acceptance
+          - Production
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name:
+        run: echo ${{ github.event.inputs.target
