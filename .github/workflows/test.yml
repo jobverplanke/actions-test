@@ -15,22 +15,25 @@ on:
 
 jobs:
   build-staging:
+    if:  ${{ inputs.environment == 'staging' }}
     runs-on: ubuntu-latest
     environment: staging
     steps:
       - name:
-        run: echo ${{ github.event.inputs.target }}
+        run: echo ${{ github.event.inputs.environment }}
 
   build-acceptance:
+    if:  ${{ inputs.environment == 'acceptance' }}
     runs-on: ubuntu-latest
     environment: acceptance
     steps:
       - name:
-        run: echo ${{ github.event.inputs.target }}
+        run: echo ${{ github.event.inputs.environment }}
 
   build-production:
+    if:  ${{ inputs.environment == 'production' }}
     runs-on: ubuntu-latest
     environment: production
     steps:
       - name:
-        run: echo ${{ github.event.inputs.target }}
+        run: echo ${{ github.event.inputs.environment }}
